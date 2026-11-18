@@ -1,0 +1,48 @@
+{
+  "project": "demo-4beats",
+  "topic": "一句话说清这个产品在干什么",
+  "aspect": "9:16",
+  "output": "final.mp4",
+  "watermark": "made with paper-collage",
+  "poster_crop_bottom_ratio": 0.04,
+  "voice": {
+    "voice": "zh-CN-YunxiNeural",
+    "rate": "+6%",
+    "head": 0.24,
+    "tail": 1.06
+  },
+  "bgm": {
+    "enabled": true,
+    "bpm": 112,
+    "gain": 0.3,
+    "mood": "bright"
+  },
+  "posters": {
+    "1": "keyframes/kf_1.jpg",
+    "2": "keyframes/kf_2.jpg",
+    "3": "keyframes/kf_3.jpg",
+    "4": "keyframes/kf_4.jpg"
+  },
+  "beats": [
+    {
+      "id": 1,
+      "title_cn": "一个问题",
+      "narration": "每天要手动做同一件事，很烦。"
+    },
+    {
+      "id": 2,
+      "title_cn": "换个做法",
+      "narration": "把这件事交出去，只要说一句话。"
+    },
+    {
+      "id": 3,
+      "title_cn": "它自己跑",
+      "narration": "剩下的步骤它自己排队做完。"
+    },
+    {
+      "id": 4,
+      "title_cn": "你只管看",
+      "narration": "你只负责看一眼，点头，或者打回。"
+    }
+  ]
+}

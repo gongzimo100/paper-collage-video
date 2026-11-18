@@ -1,0 +1,11 @@
+# 统一换行符，避免 Windows 克隆后脚本出现 CRLF 问题
+* text=auto eol=lf
+
+*.py   text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
+*.txt  text eol=lf
+
+*.mp4  binary
+*.jpg  binary
+*.png  binary
