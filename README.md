@@ -96,6 +96,6 @@ paper-collage-video/
 
 MIT。可以随便用、改、商用。保留 [LICENSE](LICENSE) 里的版权声明就行。
 
-原项目版权归 Alisa Qian；本项目的改写部分版权归本仓库贡献者。
+原项目版权归 Alisa Qian；本项目的改写部分版权归本仓库贡献者。哪些是继承的、哪些是重写的，写在 [NOTICE](NOTICE) 里。
 
 `docs/demo.mp4` 的配乐和音效是 `scripts/audio.py` 程序化合成的，配音是 edge-tts 生成的，不包含任何第三方音乐素材。

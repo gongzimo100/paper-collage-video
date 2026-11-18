@@ -1,0 +1,35 @@
+# NOTICE
+
+本项目是 [Alisa0808/vox-director](https://github.com/Alisa0808/vox-director) 的**本地化改造版**，
+原项目以 MIT 许可证发布，版权归 Alisa Qian。
+
+## 继承了原项目的部分
+
+- **方法论与流程编排**：输入主题 → 拆成逐拍分镜 → 每拍生成一张拼贴海报 → 加动效 → 配音配乐 → 拼成成片。
+- **海报 prompt 的定式**：`references/poster-prompts.md` 里的视觉语言（torn paper cut-outs、halftone dots、
+  layered cut-outs、NOT CGI 等描述方式）沿用自原项目的 prompt 指南。
+- **`beats.json` 的结构思路**：一拍一条、含标题/旁白/画面描述的数据驱动写法。
+
+## 完全重写的部分
+
+原项目的脚本是「子进程发 HTTP 请求调 Atlas Cloud 的付费模型」，本项目改成「宿主出图 + 本地渲染」：
+
+| 环节 | 原项目 | 本项目 |
+|---|---|---|
+| 出图 | Atlas Cloud · nano-banana-2 | 宿主自带 ImageGen 工具，不调外部 API |
+| 动效 | gemini-omni-flash 图生视频 | `scripts/render.py`，Pillow 逐帧绘制 |
+| 配音 | xai/tts-v1 | `scripts/tts.py`，edge-tts |
+| 配乐 | minimax/music-2.6 | `scripts/audio.py`，numpy 程序化合成 |
+| 拼装 | 本地 ffmpeg | 本地 ffmpeg |
+
+`scripts/` 下的代码为独立编写，未复制原项目源码。
+
+## 免责
+
+本项目**不是** vox-director 的官方版本，也不代表原作者的任何立场或背书。
+原项目的名称、商标与作者身份不属于本项目。
+
+## 演示素材
+
+`docs/demo.mp4` 的画面由本项目的渲染引擎生成，配音来自 edge-tts，配乐与音效由
+`scripts/audio.py` 程序化合成，**不含任何第三方音乐素材**。
