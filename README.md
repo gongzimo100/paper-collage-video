@@ -15,7 +15,15 @@
 
 <img src="docs/shots/s_2.5.jpg" width="24%"> <img src="docs/shots/s_9.0.jpg" width="24%"> <img src="docs/shots/s_18.0.jpg" width="24%"> <img src="docs/shots/s_30.0.jpg" width="24%">
 
-[▶ 看完整演示（40 秒 / 3.1 MB）](docs/demo.mp4)
+画面完全一样，音轨给了三个版本，按用途挑：
+
+| 版本 | 音轨 | 大小 | 适合 |
+|---|---|---|---|
+| **[▶ 合成音乐版](docs/demo.mp4)**（默认） | 解说 + 音效 + 程序化 BGM | 3.3 MB | 直接看效果。全部自有，零版权负担 |
+| **[▶ 纯人声版](docs/demo-no-bgm.mp4)** | 解说 + 音效，无 BGM | 3.2 MB | 想自己配乐 / 当素材二次剪辑 |
+| **[▶ 第三方音乐版](docs/demo-carefree.mp4)** | 解说 + 音效 + Carefree | 3.3 MB | 听「换成真曲子」是什么感觉 |
+
+前两个版本里没有一个第三方音符。第三个版本的曲子是 **Kevin MacLeod 的 Carefree，CC BY 4.0**，可以商用，义务只有署名——署名和授权细节见 [CREDITS](CREDITS.md)。
 
 ## 和原项目的关系
 
@@ -81,8 +89,11 @@ paper-collage-video/
 │   ├── beats-spec.md            字段表 + 写稿规矩 + 音色表
 │   └── poster-prompts.md        prompt 骨架 + 6 组配色 + 场景写法
 ├── examples/beats.example.json
+├── CREDITS.md                   演示片三个音轨版本 + 第三方音乐署名
 └── docs/
-    ├── demo.mp4                 演示片（本技能生成）
+    ├── demo.mp4                 演示片（合成音乐）
+    ├── demo-no-bgm.mp4          演示片（无 BGM）
+    ├── demo-carefree.mp4        演示片（第三方曲，CC BY 4.0）
     └── shots/                   README 配图
 ```
 
@@ -90,12 +101,12 @@ paper-collage-video/
 
 - **出海报要花你自己的图片额度**，一条片子大约 25–50 credits。其余全部本地免费。
 - 中文字幕和标题**不用 AI 写**，是本地字体渲染的，所以不会有错字。
-- 要换现成音乐，在 `beats.json` 里设 `bgm.source: "file"`。**用的曲子授权你自己确认**——CC0 随便用，CC BY 必须署名。
+- 要换现成音乐，在 `beats.json` 里设 `bgm.source: "file"`。**用的曲子授权你自己确认**——CC0 随便用，CC BY 必须署名。判定表和署名写法见 [CREDITS](CREDITS.md)。
 
 ## 授权
 
-MIT。可以随便用、改、商用。保留 [LICENSE](LICENSE) 里的版权声明就行。
+MIT。代码可以随便用、改、商用。保留 [LICENSE](LICENSE) 里的版权声明就行。
 
 原项目版权归 Alisa Qian；本项目的改写部分版权归本仓库贡献者。哪些是继承的、哪些是重写的，写在 [NOTICE](NOTICE) 里。
 
-`docs/demo.mp4` 的配乐和音效是 `scripts/audio.py` 程序化合成的，配音是 edge-tts 生成的，不包含任何第三方音乐素材。
+`docs/demo.mp4` 和 `docs/demo-no-bgm.mp4` 的配乐和音效是 `scripts/audio.py` 程序化合成的，配音是 edge-tts 生成的，**不包含任何第三方音乐素材**，可自由商用。`docs/demo-carefree.mp4` 例外，它用的曲子来自 Kevin MacLeod，按 CC BY 4.0 使用并已署名，详见 [CREDITS](CREDITS.md)。
